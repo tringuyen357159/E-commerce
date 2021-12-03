@@ -1,0 +1,23 @@
+@baseUrl = http://localhost:5000/api/auth
+
+
+# @name register
+POST {{baseUrl}}/register
+Content-Type: application/json
+
+{
+    "username": "Trí Nguyễn",
+    "email": "tringuyen357159@gmail.com",
+    "password": "123456"
+}
+
+###
+
+# @name login
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123456"
+}

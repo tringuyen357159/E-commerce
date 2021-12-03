@@ -1,0 +1,69 @@
+@baseUrl = http://localhost:5000/api/order
+
+# @name create
+POST {{baseUrl}}/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTQ0Y2U5ZTEzYjc2MDc3YzY0YmI4NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODQzNDcxNSwiZXhwIjoxNjM4NjkzOTE1fQ.SgNRH3mv568c0hPHPHm5_tZyeyX0CDrmrI8ltTMfLJI
+
+{
+    "userId": "61a24874c8f5650e552dc927",
+    "products": [
+        {
+            "productId": "fsdfddsf",
+            "quantity": 10
+        },
+         {
+            "productId": "fsdfddsf",
+            "quantity": 6
+        }
+    ],
+    "amount": 150,
+    "address": "Indonesia"
+}
+
+###
+
+# @name update
+PUT  {{baseUrl}}/update/61a49c3e0f77290d4a055fb1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTQ0Y2U5ZTEzYjc2MDc3YzY0YmI4NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODE1NzY3MiwiZXhwIjoxNjM4NDE2ODcyfQ.OHS0w8p_JwbtgEFM_UlPmG5hV3wUQ28yJeyg4lOyGFg
+
+{
+     "products": [
+        {
+            "productId": "fsdfddsf",
+            "quantity": 3
+        },
+         {
+            "productId": "fsdfddsf",
+            "quantity": 5
+        }
+    ],
+    "amount": 50,
+    "address": "Thai Lan"
+}
+
+###
+
+# @name delete
+DELETE  {{baseUrl}}/delete/61a49c3e0f77290d4a055fb1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTQ0Y2U5ZTEzYjc2MDc3YzY0YmI4NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODE1NzY3MiwiZXhwIjoxNjM4NDE2ODcyfQ.OHS0w8p_JwbtgEFM_UlPmG5hV3wUQ28yJeyg4lOyGFg
+
+###
+
+# @name find
+GET {{baseUrl}}/find/61a24874c8f5650e552dc927
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTQ0Y2U5ZTEzYjc2MDc3YzY0YmI4NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODE1NzY3MiwiZXhwIjoxNjM4NDE2ODcyfQ.OHS0w8p_JwbtgEFM_UlPmG5hV3wUQ28yJeyg4lOyGFg
+
+###
+
+# @name findall
+GET {{baseUrl}}/findAll
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTQ0Y2U5ZTEzYjc2MDc3YzY0YmI4NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODE1NzY3MiwiZXhwIjoxNjM4NDE2ODcyfQ.OHS0w8p_JwbtgEFM_UlPmG5hV3wUQ28yJeyg4lOyGFg
+
+
+###
+
+# @name income
+GET {{baseUrl}}/income
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTQ0Y2U5ZTEzYjc2MDc3YzY0YmI4NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODE1NzY3MiwiZXhwIjoxNjM4NDE2ODcyfQ.OHS0w8p_JwbtgEFM_UlPmG5hV3wUQ28yJeyg4lOyGFg

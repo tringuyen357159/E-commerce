@@ -1,0 +1,116 @@
+@mixin pc { @media (max-width: 1023px) {     
+    @content;   
+   } 
+}  
+
+@mixin tablet { @media (min-width:740px) and (max-width: 1023px) {     
+    @content;   
+   } 
+}  
+
+@mixin mobile { @media (max-width: 739px) {     
+    @content;   
+   } 
+}  
+
+.nav-container {
+    height: 60px;
+    
+    @include mobile {     
+        height: 50px;  
+    }    
+
+    &__wrapper {
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include mobile {     
+            padding: 10px 0px;
+        } 
+
+        &-left {
+            flex: 1;
+            display: flex;
+            align-items: center;
+
+            span {
+                font-size: 14px;
+                cursor: pointer;
+                @include mobile {     
+                    display: none;
+                } 
+            }
+
+            > div {
+                border: 0.5px solid lightgray;
+                display: flex;
+                align-items: center;
+                margin-left: 25px;
+                padding: 5px;
+                @include mobile {     
+                    margin-left: 15px;
+                } 
+
+                input {
+                    border: none;
+                    @include mobile {     
+                        width: 50px;
+                    } 
+
+                    &:focus {
+                       outline: none;
+                    }
+                }
+
+                i {
+                    color: rgb(70, 69, 69);
+                    
+                }
+            }
+        }
+
+        &-center {
+            flex: 1;
+            text-align: center;
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            h1 {
+                font-weight: bold;
+                @include mobile {     
+                    font-size: 24px;
+                } 
+            }
+        }
+
+        &-right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            @include mobile {     
+                flex: 2;
+                justify-content: center;
+            } 
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            &--register, &--login, &--order {
+                font-size: 14px;
+                cursor: pointer;
+                margin-left: 25px;
+                @include mobile {     
+                    font-size: 12px;
+                    margin-left: 10px;
+                } 
+            }
+        }
+    }
+}

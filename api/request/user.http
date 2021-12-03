@@ -1,0 +1,36 @@
+@baseUrl = http://localhost:5000/api/user
+
+# @name update
+PUT {{baseUrl}}/update/61a24874c8f5650e552dc927
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTI0ODc0YzhmNTY1MGU1NTJkYzkyNyIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2MzgxNTE5ODAsImV4cCI6MTYzODQxMTE4MH0.rBUIpM9aaEoO2tI0XZm4s2pxwO7s2LgWn7xkNM6qqJ8
+
+{
+    "username": "Trí Nguyễn",
+    "password": "123456",
+    "email": "tringuyen357159@gmail.com"
+}
+
+###
+
+# @name delete
+DELETE  {{baseUrl}}/delete/61a24874c8f5650e552dc927
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTI0ODc0YzhmNTY1MGU1NTJkYzkyNyIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2MzgxNTE5ODAsImV4cCI6MTYzODQxMTE4MH0.rBUIpM9aaEoO2tI0XZm4s2pxwO7s2LgWn7xkNM6qqJ8
+
+###
+
+# @name find
+GET {{baseUrl}}/find/61a24874c8f5650e552dc927
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTQ0Y2U5ZTEzYjc2MDc3YzY0YmI4NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODE1NzY3MiwiZXhwIjoxNjM4NDE2ODcyfQ.OHS0w8p_JwbtgEFM_UlPmG5hV3wUQ28yJeyg4lOyGFg
+
+###
+
+# @name getall
+GET {{baseUrl}}/getAll
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTQ0Y2U5ZTEzYjc2MDc3YzY0YmI4NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODE1NzY3MiwiZXhwIjoxNjM4NDE2ODcyfQ.OHS0w8p_JwbtgEFM_UlPmG5hV3wUQ28yJeyg4lOyGFg
+
+###
+
+# @name getbymonth
+GET {{baseUrl}}/byMonth
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTQ0Y2U5ZTEzYjc2MDc3YzY0YmI4NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODE1NzY3MiwiZXhwIjoxNjM4NDE2ODcyfQ.OHS0w8p_JwbtgEFM_UlPmG5hV3wUQ28yJeyg4lOyGFg

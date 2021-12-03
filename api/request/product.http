@@ -1,0 +1,51 @@
+@baseUrl = http://localhost:5000/api/products
+
+# @name create
+POST {{baseUrl}}/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTQ0Y2U5ZTEzYjc2MDc3YzY0YmI4NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODQ0NzM2NywiZXhwIjoxNjM4NzA2NTY3fQ.1dotnakYwWV6Ek5JvE5kIBVjKKXoO1hRw0GS7ZCXlKc
+
+{
+    "title": "ewqewq",
+    "desc": "Beautifull",
+    "img": "https://d3o2e4jr3mxnm3.cloudfront.net/Rocket-Vintage-Chill-Cap_66374_1_lg.png",
+    "categories": ["T-shirt", "women"],
+    "size": "XL",
+    "color": "yellow",
+    "price": 100
+}
+
+###
+
+# @name update
+PUT  {{baseUrl}}/update/61a726ad6aa1378ffef56805
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTQ0Y2U5ZTEzYjc2MDc3YzY0YmI4NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODE1NzY3MiwiZXhwIjoxNjM4NDE2ODcyfQ.OHS0w8p_JwbtgEFM_UlPmG5hV3wUQ28yJeyg4lOyGFg
+
+{
+    "title": "Pumaa T-shirt",
+    "desc": "Beautifulla",
+    "img": "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+    "categories": ["T-shirta", "Mana"],
+    "size": "Ma",
+    "color": "graya",
+    "price": 60
+}
+
+###
+
+# @name delete
+DELETE  {{baseUrl}}/delete/61a45c346cde142876bf9cd4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTQ0Y2U5ZTEzYjc2MDc3YzY0YmI4NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODE1NzY3MiwiZXhwIjoxNjM4NDE2ODcyfQ.OHS0w8p_JwbtgEFM_UlPmG5hV3wUQ28yJeyg4lOyGFg
+
+###
+
+# @name find
+GET {{baseUrl}}/find/61a45c346cde142876bf9cd4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTQ0Y2U5ZTEzYjc2MDc3YzY0YmI4NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODE1NzY3MiwiZXhwIjoxNjM4NDE2ODcyfQ.OHS0w8p_JwbtgEFM_UlPmG5hV3wUQ28yJeyg4lOyGFg
+
+###
+
+# @name findall
+GET {{baseUrl}}/findAll?category=women
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTQ0Y2U5ZTEzYjc2MDc3YzY0YmI4NiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODE1NzY3MiwiZXhwIjoxNjM4NDE2ODcyfQ.OHS0w8p_JwbtgEFM_UlPmG5hV3wUQ28yJeyg4lOyGFg

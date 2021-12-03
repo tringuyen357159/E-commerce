@@ -1,0 +1,167 @@
+@mixin pc { @media (max-width: 1026px) {     
+    @content;   
+   } 
+}
+
+@mixin tablet { @media (min-width:740px) and (max-width: 1026px) {     
+    @content;   
+   } 
+}  
+
+@mixin mobile { @media (max-width: 739px) {     
+    @content;   
+   } 
+} 
+
+.cart {
+
+    &-container {
+        padding: 20px;
+        @include mobile {
+            padding: 10px;
+        }
+
+        &--title {
+            font-weight: 300;
+            text-align: center;
+        }
+
+        &__top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+
+            &--btn {
+                padding: 10px;
+                font-weight: 600;
+                cursor: pointer;
+            }
+
+            &-text {
+                @include mobile {
+                    display: none;
+                }
+
+                span {
+                    text-decoration: underline;
+                    cursor: pointer;
+                    margin: 0px 10px;
+                }
+            }
+        }
+
+        &__bottom {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 50px;
+            border-bottom: 1px solid #eee;
+            @include mobile {
+                flex-direction: column;
+            }
+
+            &-info {
+                flex: 3;
+
+                &-list {
+                    display: flex;
+                    justify-content: space-between;
+                    @include mobile {
+                        flex-direction: column;
+                    }
+
+                    &-item {
+                        flex: 2;
+                        display: flex;
+
+                        img {
+                            width: 200px;
+                        }
+
+                        &-detail {
+                            padding: 20px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+
+                            span{
+
+                            }
+                        }
+                    }
+
+                    &-price {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        &-action {
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 20px;
+
+                            &--quantity {
+                                font-size: 24px;
+                                margin: 5px;
+
+                                @include mobile {
+                                    margin: 5px 15px;
+                                }
+                            }
+                        }
+
+                        &--detail {
+                            font-size: 30px;
+                            font-weight: 200;
+
+                            @include mobile {
+                               margin-bottom: 20px;
+                            }
+                        }
+                    }
+                }
+
+                hr {
+                    background-color: #eee;
+                    border: none;
+                    height: 1px;
+                }
+            }
+
+            &-summary {
+                flex: 1;
+                border: 0.5px solid lightgray;
+                border-radius: 10px;
+                padding: 20px;
+                height: 50vh;
+                @include pc {
+                    height: 30vh;
+                }
+
+                &--title {
+                    font-weight: 200;
+                }
+
+                &-item {
+                    margin: 30px 0px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    span {
+
+                    }
+                }
+
+                &--btn {
+                    width: 100%;
+                    padding: 10px;
+                    background-color: black;
+                    color: white;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
